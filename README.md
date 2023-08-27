@@ -8,6 +8,7 @@ Simple CircuitPython Library for TapDance Functionality using Keypad/KeyMatrix.
 ## Dependencies
 
 - [CircuitPython KeyMap](https://docs.circuitpython.org/en/latest/shared-bindings/keypad/index.html)
+- [Adafruit Ticks](https://docs.circuitpython.org/projects/ticks/en/latest/api.html)
 ## Usage/Examples
 
 ```python
