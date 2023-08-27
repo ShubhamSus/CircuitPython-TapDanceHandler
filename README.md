@@ -1,9 +1,5 @@
-
-Introduction
-============
+# Introduction
 Simple CircuitPython Library for TapDance Functionality using Keypad/KeyMatrix.
-
-
 
 ## Dependencies
 
@@ -43,8 +39,6 @@ elif state.short_show == 3:
 elif state.long_show:
     return f"{key}.{2} Long Pressed"
 ```
-
-
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
