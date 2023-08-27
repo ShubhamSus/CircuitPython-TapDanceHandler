@@ -1,7 +1,7 @@
 
 Introduction
 ============
-Simple CircuitPython Library for Keypad/KeyMatrix TapDance Functionality.
+Simple CircuitPython Library for TapDance Functionality using Keypad/KeyMatrix.
 
 
 
