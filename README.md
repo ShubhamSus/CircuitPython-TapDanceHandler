@@ -5,7 +5,6 @@ Simple CircuitPython Library for Keypad/KeyMatrix TapDance Functionality.
 
 
 
-
 ## Dependencies
 
 - [CircuitPython KeyMap](https://docs.circuitpython.org/en/latest/shared-bindings/keypad/index.html)
@@ -30,6 +29,20 @@ try:
 except KeyboardInterrupt as ex:
     print(ex)
 ```
+
+To implement multi-click detection in the `keypad_tapdance.py` script based on the desired number of clicks, you can use the following revised code snippet:
+```python
+# Determine the key press type and return the corresponding message
+if state.short_show == 1:
+    return f"{key}.{0} Single Clicked"
+elif state.short_show == 2:
+    return f"{key}.{1} Double Clicked"
+elif state.short_show == 3:
+    return f"{key}.{1} Triple Clicked"
+elif state.long_show:
+    return f"{key}.{2} Long Pressed"
+```
+
 
 ## License
 
