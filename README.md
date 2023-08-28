@@ -1,4 +1,4 @@
-# Introduction
+# Overview
 Simple CircuitPython Library for TapDance Functionality using Keypad/KeyMatrix.
 
 ## Dependencies
