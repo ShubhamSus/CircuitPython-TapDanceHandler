@@ -31,13 +31,17 @@ To implement multi-click detection in the `keypad_tapdance.py` script based on t
 ```python
 # Determine the key press type and return the corresponding message
 if state.short_show == 1:
-    return f"{key}.{0} Single Clicked"
+    #return f"{key}.{0} Single Clicked"
+    self.events.append(f"{key}.{0}")
 elif state.short_show == 2:
-    return f"{key}.{1} Double Clicked"
+    #return f"{key}.{1} Double Clicked"
+    self.events.append(f"{key}.{1}")
 elif state.short_show == 3:
-    return f"{key}.{1} Triple Clicked"
+    #return f"{key}.{1} Triple Clicked"
+    self.events.append(f"{key}.{2}")           
 elif state.long_show:
-    return f"{key}.{2} Long Pressed"
+    #return f"{key}.{2} Long Pressed"
+    self.events.append(f"{key}.{3}")
 ```
 ## License
 
