@@ -9,6 +9,7 @@ class KeyState:
         self.short_show = 0
         self.long_registered = False
         self.long_show = False
+        
 
 class Keyboard:
     def __init__(self, row_pins, col_pins, short_duration_ms: int = 90, long_duration_ms: int = 450):
@@ -17,6 +18,8 @@ class Keyboard:
         self.short_duration_ms = short_duration_ms
         self.long_duration_ms = long_duration_ms
         self.key_states = [KeyState() for _ in range(self.keys.key_count)]
+        
+        self.events = []
         
     def update(self):
         # Get the latest key events from the keypad
@@ -38,6 +41,7 @@ class Keyboard:
                 if state.long_registered:
                     state.long_registered = False  # Reset long press registration
         
+        self.events = []
         for key, state in enumerate(self.key_states):
             # Calculate the time since the last change of key state
             duration = ticks_diff(ticks_ms(), state.last_change_ms)
@@ -60,11 +64,17 @@ class Keyboard:
             
             # Determine the key press type and return the corresponding message
             if state.short_show == 1:
-                return f"{key}.{0} Single Clicked"
+                #return f"{key}.{0} Single Clicked"
+                self.events.append(f"{key}.{0}")
             elif state.short_show == 2:
-                return f"{key}.{1} Double Clicked"
+                #return f"{key}.{1} Double Clicked"
+                self.events.append(f"{key}.{1}")           
             elif state.long_show:
-                return f"{key}.{2} Long Pressed"
+                #return f"{key}.{2} Long Pressed"
+                self.events.append(f"{key}.{2}")
+                
+    def get(self) -> list:
+        return self.events
     
     def short_press(self, key_index) -> int:
         return self.key_states[key_index].short_show
