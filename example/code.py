@@ -13,7 +13,7 @@ try:
         
         event = keyboard.get()
         if event:
-            print(event)
+            print(f"<Key {event}>")
         
 except KeyboardInterrupt as ex:
     print(ex)
