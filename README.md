@@ -9,13 +9,14 @@ Simple CircuitPython Library for TapDance Functionality using Keypad/KeyMatrix.
 
 ```python
 import board
-from keypad_tapdance import Keyboard
+from keypad_tapdance import Keeb
 
 # Define keypad pins
 ROWS = (board.GP15, board.GP14, board.GP13)
 COLS = (board.GP12, board.GP11, board.GP10, board.GP9)
+COLUMNS_TO_ANODES = True
 
-keyboard  = Keyboard(ROWS, COLS)
+keyboard  = Keeb(ROWS, COLS, COLUMNS_TO_ANODES)
 
 try:
     while True:

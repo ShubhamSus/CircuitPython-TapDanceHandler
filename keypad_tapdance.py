@@ -11,8 +11,8 @@ class KeyState:
         self.long_show = False
         
 
-class Keyboard:
-    def __init__(self, row_pins, col_pins, short_duration_ms: int = 90, long_duration_ms: int = 450):
+class Keeb:
+    def __init__(self, row_pins, col_pins, columns_to_anodes: bool = True, short_duration_ms: int = 90, long_duration_ms: int = 550):
         # Initialize the keypad and set the time durations for short and long presses
         self.keys = KeyMatrix(row_pins=row_pins, column_pins=col_pins, columns_to_anodes=True)
         self.short_duration_ms = short_duration_ms
