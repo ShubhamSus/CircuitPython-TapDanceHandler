@@ -19,9 +19,11 @@ keyboard  = Keyboard(ROWS, COLS)
 
 try:
     while True:
-        key = keyboard.update()
-        if key != None:
-            print(key)
+        keyboard.update()
+        
+        event = keyboard.get()
+        if event:
+            print(f"<Key {event}>")
         
 except KeyboardInterrupt as ex:
     print(ex)
