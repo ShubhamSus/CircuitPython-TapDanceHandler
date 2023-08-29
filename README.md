@@ -45,5 +45,5 @@ elif state.long_show:
 ```
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](LICENSE)
 
