@@ -1,7 +1,7 @@
 import board
 from keypad_tapdance import Keeb
 
-# Define keypad pins
+# Define Keypad Pins For Tapdance Handler
 ROWS = (board.GP15, board.GP14, board.GP13)
 COLS = (board.GP12, board.GP11, board.GP10, board.GP9)
 COLUMNS_TO_ANODES = True
