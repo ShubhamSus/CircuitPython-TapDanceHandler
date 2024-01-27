@@ -29,7 +29,7 @@ try:
 except KeyboardInterrupt as ex:
     print(ex)
 ```
-`send_keycodes_example.py`
+`library/send_keycodes_example.py`
 ```python
 import board
 import usb_hid
