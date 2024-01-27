@@ -71,7 +71,7 @@ except KeyboardInterrupt as ex:
     pass
 ```
 
-To implement multi-click detection in the `keypad_tapdance.py` script based on the desired number of clicks, you can use the following revised code snippet:
+To implement multi-click detection in the `library/keypad_tapdance.py` script based on the desired number of clicks, you can use the following revised code snippet:
 ```python
 # Determine the key press type and add it into list of events
 if state.short_show == 1:
